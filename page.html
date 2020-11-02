@@ -10,36 +10,37 @@
 </head>
 
 <body>
-    <h1>Hello</h1>
-
-    <div class="form-row">
+    <!-- <div class="form-row">
         <label>First Name: </label><input type="text" name="name" id="fname">
     </div>
 
     <div class="form-row">
         <label>Last Name: </label><input type="text" name="name" id="lname">
-    </div>
+    </div> -->
     <div class="row">
         <div class="input-field col s6">
-            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+            <input placeholder="Placeholder" id="fname" type="text" class="validate">
+            <label for="fname">First Name</label>
         </div>
         <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Last Name</label>
+            <input id="lname" type="text" class="validate">
+            <label for="lname">Last Name</label>
         </div>
     </div>
-    <div class="form-row">
-        <label>Application</label>
-        <select id="app">
-            <option>Google Sheets</option>
-            <option>Microsoft Excel</option>
-            <option>Libre Sheets</option>
-        </select>
+    <div class="row">
+        <div class="input-field col s12">
+            <select id="app">
+                <!-- <option disabled selected>Choose your option</option> -->
+                <option>Google Sheets</option>
+                <option>Microsoft Excel</option>
+                <option>Libre Sheets</option>
+            </select>
+            <label>Application</label>
+        </div>
     </div>
 
     <div>
-        <button id="btn">Run It</button>
+        <a class="waves-effect waves-light btn" id="btn">Run It</a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
