@@ -1,10 +1,17 @@
+var url = "https://docs.google.com/spreadsheets/d/1zTIOTnwzNVyFRhoOhdscrEcX7EQyNVAZzIMOINR5wEk/edit?usp=sharing";
+
 function doGet(e) {
-  Logger.log(e);
-  return HtmlService.createTemplateFromFile("page").evaluate();
+  
+  var spreadsheet = SpreadsheetApp.openByUrl(url);
+  var ws = spreadsheet.getSheetByName("Data");
+  
+  var tmp = HtmlService.createTemplateFromFile("page");
+  tmp.title = "Title";
+  tmp.list = ["Google Sheets","Microsoft Excel"]
+  return tmp.evaluate();
 }
 
 function userClicked(userInfo) {
-  var url = "https://docs.google.com/spreadsheets/d/1zTIOTnwzNVyFRhoOhdscrEcX7EQyNVAZzIMOINR5wEk/edit?usp=sharing";
   var spreadsheet = SpreadsheetApp.openByUrl(url);
   var ws = spreadsheet.getSheetByName("Data");
   

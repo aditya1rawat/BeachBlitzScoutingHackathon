@@ -2,7 +2,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems, options);
+        var instances = M.FormSelect.init(elems);
     });
 
 
@@ -16,9 +16,10 @@
         userInfo.app = document.getElementById("app").value;
 
         google.script.run.userClicked(userInfo);
-        console.log(username);
         document.getElementById("fname").value = "";
         document.getElementById("lname").value = "";
-        document.getElementById("app").value = "";
+        var myApp = document.getElementById("app");
+        myApp.selectedIndex = 0;
+        M.FormSelect.init(myApp);
     }
 </script>

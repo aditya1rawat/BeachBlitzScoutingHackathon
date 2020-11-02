@@ -18,9 +18,6 @@
         <label>Last Name: </label><input type="text" name="name" id="lname">
     </div> -->
     <div class="container">
-
-        <? var title = "hello"; ?>
-        <h1><?= title; ?></h1>
         <div class="row">
             <div class="input-field col s6">
                 <input id="fname" type="text" class="validate">
@@ -35,8 +32,9 @@
             <div class="input-field col s12">
                 <select id="app">
                     <option disabled selected>Choose your option</option>
-                    <option>Google Sheets</option>
-                    <option>Microsoft Excel</option>
+                    <? for(var i = 0; i < list.length; i++){ ?>
+                    <option><?= list[i] ?></option>
+                    <? } ?>
                     <option>Libre Sheets</option>
                 </select>
                 <label>Application</label>
