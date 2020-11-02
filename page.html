@@ -3,12 +3,7 @@
 
 <head>
     <base target="_top">
-    <style>
-        .form-row {
-            margin-bottom: 15px;
-
-        }
-    </style>
+    <?!= include("page-css"); ?>
 </head>
 
 <body>
@@ -34,23 +29,8 @@
     <div>
         <button id="btn">Run It</button>
     </div>
-    <script>
-        document.getElementById("btn").addEventListener("click", doStuff);
 
-        function doStuff() {
-
-            var userInfo = {};
-            userInfo.firstName = document.getElementById("fname").value;
-            userInfo.lastName = document.getElementById("lname").value;
-            userInfo.app = document.getElementById("app").value;
-
-            google.script.run.userClicked(userInfo);
-            console.log(username);
-            document.getElementById("fname").value = "";
-            document.getElementById("lname").value = "";
-            document.getElementById("app").value = "";
-        }
-    </script>
+    <?!= include("page-js"); ?>
 </body>
 
 </html>

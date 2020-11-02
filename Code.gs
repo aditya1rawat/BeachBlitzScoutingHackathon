@@ -1,6 +1,6 @@
 function doGet(e) {
   Logger.log(e);
-  return HtmlService.createHtmlOutputFromFile("page");
+  return HtmlService.createTemplateFromFile("page").evaluate();
 }
 
 function userClicked(userInfo) {
@@ -8,7 +8,11 @@ function userClicked(userInfo) {
   var spreadsheet = SpreadsheetApp.openByUrl(url);
   var ws = spreadsheet.getSheetByName("Data");
   
-  ws.appendRow([name, new Date()]);
+  ws.appendRow([userInfo.firstName, userInfo.lastName, userInfo.app, new Date()]);
   
 //  Logger.log(name + " clicked the button!");
+}
+
+function include(filename){
+  return HtmlService.createHtmlOutputFromFile(filename).getContent();
 }
