@@ -10,38 +10,28 @@
 </head>
 
 <body>
-    <!-- <div class="form-row">
-        <label>First Name: </label><input type="text" name="name" id="fname">
-    </div>
-
-    <div class="form-row">
-        <label>Last Name: </label><input type="text" name="name" id="lname">
-    </div> -->
     <div class="container">
-        <div class="row">
-            <div class="input-field col s6">
-                <input id="fname" type="text" class="validate">
-                <label for="fname">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="lname" type="text" class="validate">
-                <label for="lname">Last Name</label>
-            </div>
-        </div>
         <div class="row">
             <div class="input-field col s12">
                 <select id="app">
                     <option disabled selected>Choose your option</option>
-                    <?!= list; ?>
+
                 </select>
                 <label>Application</label>
             </div>
         </div>
-        <div class="row">
-            <button class="btn waves-effect waves-light indigo" type="submit" name="action" id="btn">Submit
-                <i class="material-icons right">send</i>
-            </button>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Score/Points</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?!= list; ?>
+            </tbody>
+        </table>
     </div>
 
 
