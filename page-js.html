@@ -1,4 +1,11 @@
 <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+
+
     document.getElementById("btn").addEventListener("click", doStuff);
 
     function doStuff() {

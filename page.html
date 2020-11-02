@@ -17,27 +17,31 @@
     <div class="form-row">
         <label>Last Name: </label><input type="text" name="name" id="lname">
     </div> -->
-    <div class="row">
-        <div class="input-field col s6">
-            <input placeholder="Placeholder" id="fname" type="text" class="validate">
-            <label for="fname">First Name</label>
+    <div class="container">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="fname" type="text" class="validate">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="lname" type="text" class="validate">
+                <label for="lname">Last Name</label>
+            </div>
         </div>
-        <div class="input-field col s6">
-            <input id="lname" type="text" class="validate">
-            <label for="lname">Last Name</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <select id="app">
+                    <option disabled selected>Choose your option</option>
+                    <option>Google Sheets</option>
+                    <option>Microsoft Excel</option>
+                    <option>Libre Sheets</option>
+                </select>
+                <label>Application</label>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <select id="app">
-                <!-- <option disabled selected>Choose your option</option> -->
-                <option>Google Sheets</option>
-                <option>Microsoft Excel</option>
-                <option>Libre Sheets</option>
-            </select>
-            <label>Application</label>
-        </div>
-    </div>
+
+
 
     <div>
         <a class="waves-effect waves-light btn" id="btn">Run It</a>
