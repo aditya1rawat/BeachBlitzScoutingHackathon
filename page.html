@@ -18,6 +18,9 @@
         <label>Last Name: </label><input type="text" name="name" id="lname">
     </div> -->
     <div class="container">
+
+        <? var title = "hello"; ?>
+        <h1><?= title; ?></h1>
         <div class="row">
             <div class="input-field col s6">
                 <input id="fname" type="text" class="validate">
@@ -39,13 +42,15 @@
                 <label>Application</label>
             </div>
         </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light indigo" type="submit" name="action" id="btn">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
     </div>
 
 
 
-    <div>
-        <a class="waves-effect waves-light btn" id="btn">Run It</a>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <?!= include("page-js"); ?>
