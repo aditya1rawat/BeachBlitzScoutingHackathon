@@ -3,11 +3,13 @@ var url = "https://docs.google.com/spreadsheets/d/1zTIOTnwzNVyFRhoOhdscrEcX7EQyN
 function doGet(e) {
   
   var spreadsheet = SpreadsheetApp.openByUrl(url);
-  var ws = spreadsheet.getSheetByName("Data");
+  var ws = spreadsheet.getSheetByName("Options");
+  var list = ws.getRange(1, 1, ws.getRange("A1").getDataRegion().getLastRow(), 1).getValues();
   
   var tmp = HtmlService.createTemplateFromFile("page");
   tmp.title = "Title";
-  tmp.list = ["Google Sheets","Microsoft Excel"]
+  var htmlListArray = list.map(function(r){ return '<option>' + r[0] + '</option>'; }).join("");
+  tmp.list = htmlListArray;
   return tmp.evaluate();
 }
 

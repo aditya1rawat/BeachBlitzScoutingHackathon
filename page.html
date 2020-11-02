@@ -32,10 +32,7 @@
             <div class="input-field col s12">
                 <select id="app">
                     <option disabled selected>Choose your option</option>
-                    <? for(var i = 0; i < list.length; i++){ ?>
-                    <option><?= list[i] ?></option>
-                    <? } ?>
-                    <option>Libre Sheets</option>
+                    <?!= list; ?>
                 </select>
                 <label>Application</label>
             </div>
