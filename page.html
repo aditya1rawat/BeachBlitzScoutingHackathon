@@ -3,23 +3,52 @@
 
 <head>
     <base target="_top">
+    <style>
+        .form-row {
+            margin-bottom: 15px;
+
+        }
+    </style>
 </head>
 
 <body>
     <h1>Hello</h1>
 
-    <label>Name: </label><input type="text" name="name" id="username">
-    <button id="btn">Run It</button>
+    <div class="form-row">
+        <label>First Name: </label><input type="text" name="name" id="fname">
+    </div>
 
+    <div class="form-row">
+        <label>Last Name: </label><input type="text" name="name" id="lname">
+    </div>
+
+    <div class="form-row">
+        <label>Application</label>
+        <select id="app">
+            <option>Google Sheets</option>
+            <option>Microsoft Excel</option>
+            <option>Libre Sheets</option>
+        </select>
+    </div>
+
+    <div>
+        <button id="btn">Run It</button>
+    </div>
     <script>
         document.getElementById("btn").addEventListener("click", doStuff);
 
         function doStuff() {
-            var username = document.getElementById("username").value;
 
-            google.script.run.userClicked(username);
+            var userInfo = {};
+            userInfo.firstName = document.getElementById("fname").value;
+            userInfo.lastName = document.getElementById("lname").value;
+            userInfo.app = document.getElementById("app").value;
+
+            google.script.run.userClicked(userInfo);
             console.log(username);
-            document.getElementById("username").value = "";
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("app").value = "";
         }
     </script>
 </body>
