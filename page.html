@@ -3,6 +3,9 @@
 
 <head>
     <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <?!= include("page-css"); ?>
 </head>
 
@@ -16,7 +19,16 @@
     <div class="form-row">
         <label>Last Name: </label><input type="text" name="name" id="lname">
     </div>
-
+    <div class="row">
+        <div class="input-field col s6">
+            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+        </div>
+    </div>
     <div class="form-row">
         <label>Application</label>
         <select id="app">
@@ -30,6 +42,7 @@
         <button id="btn">Run It</button>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <?!= include("page-js"); ?>
 </body>
 
