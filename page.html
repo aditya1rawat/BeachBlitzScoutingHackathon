@@ -18,7 +18,8 @@
             var username = document.getElementById("username").value;
 
             google.script.run.userClicked(username);
-            console.log("Clicked");
+            console.log(username);
+            document.getElementById("username").value = "";
         }
     </script>
 </body>
