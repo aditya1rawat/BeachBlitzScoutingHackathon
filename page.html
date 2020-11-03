@@ -6,25 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(getData);
+
+        function getData() {
+            google.script.run.withSuccessHandler(drawChart).getChartData();
+        }
+
+        function drawChart(dataReturned) {
+            var data = google.visualization.arrayToDataTable(dataReturned);
+
+            var options = {
+                title: 'Company Performance',
+                subtitle: "lorem ipsum"
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
-        <h1>Pick List</h1>
+        <h1>Team 3467B Web Dashboard</h1>
         <div class="row">
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Team</th>
-                    <th>Score/Points</th>
-                </tr>
-            </thead>
+            <div class="col s6">
+                <h2>Pick List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Score/Points</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                <?!= list; ?>
-            </tbody>
-        </table>
+                    <tbody>
+                        <?!= list; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s6">
+                <h2>Chart</h2>
+                <div id="curve_chart" style="width: 900px; height: 500px"></div>
+            </div>
+        </div>
     </div>
 
 
