@@ -2,8 +2,24 @@ var url =
   "https://docs.google.com/spreadsheets/d/1lp036fR9FwYFdWXJWv9x6nEb3rCqecT0BhlUFjeGqnE/edit?usp=sharing";
 var spreadsheet = SpreadsheetApp.openByUrl(url);
 var ws = spreadsheet.getSheetByName("final");
+var Route = {};
+Route.path = function (route, callback) {
+  Route[route] = callback;
+};
 
 function doGet(e) {
+  //  return chartPage();
+  Route.path("rank", chartPage);
+  Route.path("home", homePage);
+
+  if (Route[e.parameters.v]) {
+    return Route[e.parameters.v]();
+  } else {
+    return HtmlService.createTemplateFromFile("index").evaluate();
+  }
+}
+
+function chartPage() {
   var ws = spreadsheet.getSheetByName("final");
   var listOfTeams = ws
     .getRange(2, 3, ws.getRange("C1").getDataRegion().getLastRow(), 1)
@@ -15,7 +31,7 @@ function doGet(e) {
     .getRange(2, 1, ws.getRange("A1").getDataRegion().getLastRow(), 1)
     .getValues();
 
-  var tmp = HtmlService.createTemplateFromFile("index");
+  var tmp = HtmlService.createTemplateFromFile("rank");
   tmp.title = "Title";
   var counter = 0;
   var TeamListArray = listOfTeams
@@ -36,14 +52,6 @@ function doGet(e) {
   return tmp.evaluate();
 }
 
-function getChartData() {
-  var data = ws
-    .getRange(1, 1, ws.getRange("A1").getDataRegion().getLastRow() - 1, 2)
-    .getValues();
-  Logger.log(data);
-  return data;
-}
-
-function include(filename) {
-  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+function homePage() {
+  return HtmlService.createHtmlOutput("index").evaluate();
 }
