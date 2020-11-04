@@ -15,7 +15,7 @@ function doGet(e) {
     .getRange(2, 1, ws.getRange("A1").getDataRegion().getLastRow(), 1)
     .getValues();
 
-  var tmp = HtmlService.createTemplateFromFile("page");
+  var tmp = HtmlService.createTemplateFromFile("index");
   tmp.title = "Title";
   var counter = 0;
   var TeamListArray = listOfTeams
