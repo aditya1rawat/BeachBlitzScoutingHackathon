@@ -2,21 +2,64 @@ var url =
   "https://docs.google.com/spreadsheets/d/1lp036fR9FwYFdWXJWv9x6nEb3rCqecT0BhlUFjeGqnE/edit?usp=sharing";
 var spreadsheet = SpreadsheetApp.openByUrl(url);
 var ws = spreadsheet.getSheetByName("final");
+var teamList = [
+  115,
+  254,
+  399,
+  604,
+  649,
+  670,
+  687,
+  696,
+  766,
+  841,
+  846,
+  968,
+  971,
+  973,
+  1351,
+  1671,
+  1678,
+  1836,
+  1868,
+  1983,
+  2073,
+  2085,
+  2135,
+  3256,
+  3309,
+  3476,
+  3859,
+  4543,
+  5012,
+  5026,
+  5499,
+];
 var Route = {};
-Route.path = function(route, callback){
+Route.path = function (route, callback) {
   Route[route] = callback;
-}
+};
 
 function doGet(e) {
-//  return chartPage();
+  teamList.map(function (team) {
+    return Route.path(`${team}`, teams(team));
+  });
   Route.path("rank", chartPage);
   Route.path("home", homePage);
-  
-  if(Route[e.parameters.v]){
-    return Route[e.parameters.v]();
-  }else{
-    return HtmlService.createTemplateFromFile('index').evaluate();
-
+  var queryParam = e.parameter.v;
+  Logger.log("----------------Route----------------");
+  if (queryParam === "home") {
+    Logger.log("Home: " + queryParam);
+    return homePage();
+  } else if (queryParam === "rank") {
+    Logger.log("Rank: " + queryParam);
+    return Route[queryParam]();
+  } else if (queryParam != null || queryParam != undefined) {
+    Logger.log("Team Number: " + queryParam);
+    return Route[e.parameter.v];
+  } else {
+    Logger.log("404 Not Found: " + queryParam);
+    return homePage();
   }
 }
 
@@ -32,8 +75,8 @@ function chartPage() {
     .getRange(2, 1, ws.getRange("A1").getDataRegion().getLastRow(), 1)
     .getValues();
 
-  var tmp = HtmlService.createTemplateFromFile("rank");
-  tmp.title = "Title";
+  var rankPage = HtmlService.createTemplateFromFile("rank");
+  rankPage.title = "Title";
   var counter = 0;
   var TeamListArray = listOfTeams
     .map(function (r) {
@@ -49,10 +92,10 @@ function chartPage() {
       );
     })
     .join("");
-  tmp.list = TeamListArray;
-  return tmp.evaluate();
+  rankPage.list = TeamListArray;
+  return rankPage.evaluate();
 }
 
-function homePage(){
-    return HtmlService.createHtmlOutput('index').evaluate();
+function homePage() {
+  return HtmlService.createHtmlOutputFromFile("index");
 }
