@@ -3,19 +3,20 @@ var url =
 var spreadsheet = SpreadsheetApp.openByUrl(url);
 var ws = spreadsheet.getSheetByName("final");
 var Route = {};
-Route.path = function (route, callback) {
+Route.path = function(route, callback){
   Route[route] = callback;
-};
+}
 
 function doGet(e) {
-  //  return chartPage();
+//  return chartPage();
   Route.path("rank", chartPage);
   Route.path("home", homePage);
-
-  if (Route[e.parameters.v]) {
+  
+  if(Route[e.parameters.v]){
     return Route[e.parameters.v]();
-  } else {
-    return HtmlService.createTemplateFromFile("index").evaluate();
+  }else{
+    return HtmlService.createTemplateFromFile('index').evaluate();
+
   }
 }
 
@@ -52,6 +53,6 @@ function chartPage() {
   return tmp.evaluate();
 }
 
-function homePage() {
-  return HtmlService.createHtmlOutput("index").evaluate();
+function homePage(){
+    return HtmlService.createHtmlOutput('index').evaluate();
 }
