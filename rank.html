@@ -58,25 +58,20 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=home"
-                class="brand-logo" style="margin-left: 25px;">Drizzling Espresso Shots</a>
+            <a href='<?= url ?>?v=home' class="brand-logo" style="margin-left: 25px;">Drizzling Espresso Shots</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a
-                        href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=home">Home</a>
+                <li>
+                    <a href='<?= url ?>?v=home'>Home</a>
                 </li>
-                <li class="active"><a
-                        href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=rank">Rank
-                        Dashboard</a></li>
+                <li>
+                    <a href='<?= url ?>?v=teams'>Teams</a>
+                </li>
+                <li class="active">
+                    <a href='<?= url ?>?v=rank'>Rank Dashboard</a>
+                </li>
             </ul>
         </div>
     </nav>
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev">Home</a>
-        </li>
-        <li class="active"><a
-                href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=rank">Rank
-                Dashboard</a></li>
-    </ul>
 
     <div class="container">
         <h1 style="text-align: center;">Team 3467B Ranks Dashboard</h1>
@@ -104,6 +99,32 @@
             </div>
         </div>
     </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Drizzling Espresso Shots</h5>
+                    <p class="grey-text text-lighten-4">Thank you for using our web application!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="<?= url ?>?v=home">Home</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="<?= url ?>?v=teams">Teams</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="<?= url ?>?v=rank">Ranks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container" style="text-align: center;">
+                © 2020 Copyright 3476B
+            </div>
+        </div>
+    </footer>
 
 
 

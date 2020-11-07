@@ -21,5 +21,6 @@ function teams(teamNumber) {
     })
     .join("");
   teamPage.matchLink = points;
+  teamPage.url = getScriptUrl();
   return teamPage.evaluate();
 }

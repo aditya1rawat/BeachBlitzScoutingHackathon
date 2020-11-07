@@ -1,6 +1,6 @@
-var url =
+var spreadsheetUrl =
   "https://docs.google.com/spreadsheets/d/1lp036fR9FwYFdWXJWv9x6nEb3rCqecT0BhlUFjeGqnE/edit?usp=sharing";
-var spreadsheet = SpreadsheetApp.openByUrl(url);
+var spreadsheet = SpreadsheetApp.openByUrl(spreadsheetUrl);
 var ws = spreadsheet.getSheetByName("final");
 var teamList = [
   115,
@@ -46,6 +46,7 @@ function doGet(e) {
   });
   Route.path("rank", chartPage);
   Route.path("home", homePage);
+  Route.path("teams", teamsPage);
   var queryParam = e.parameter.v;
   Logger.log("----------------Route----------------");
   if (queryParam === "home") {
@@ -53,6 +54,9 @@ function doGet(e) {
     return homePage();
   } else if (queryParam === "rank") {
     Logger.log("Rank: " + queryParam);
+    return Route[queryParam]();
+  } else if (queryParam === "teams") {
+    Logger.log("Teams: " + queryParam);
     return Route[queryParam]();
   } else if (queryParam != null || queryParam != undefined) {
     Logger.log("Team Number: " + queryParam);
@@ -93,9 +97,26 @@ function chartPage() {
     })
     .join("");
   rankPage.list = TeamListArray;
+  rankPage.url = getScriptUrl();
   return rankPage.evaluate();
 }
 
 function homePage() {
-  return HtmlService.createHtmlOutputFromFile("index");
+  var homePage = HtmlService.createTemplateFromFile("index");
+  homePage.url = getScriptUrl();
+  return homePage.evaluate();
+}
+
+function teamsPage() {
+  Logger.log("-------------Inside Team------------------");
+  var teamsPage = HtmlService.createTemplateFromFile("team-page");
+  teamsPage.url = getScriptUrl();
+  return teamsPage.evaluate();
+
+  //  return HtmlService.createHtmlOutputFromFile("team-page");
+}
+
+function getScriptUrl() {
+  var url = ScriptApp.getService().getUrl();
+  return url;
 }

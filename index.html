@@ -11,509 +11,159 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=home"
-                class="brand-logo" style="margin-left: 25px;">Drizzling Espresso Shots</a>
+            <a href='<?= url ?>?v=home' class="brand-logo" style="margin-left: 25px;">Drizzling Espresso Shots</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a
-                        href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=home">Home</a>
+                <li class="active">
+                    <a href='<?= url ?>?v=home'>Home</a>
                 </li>
-                <li><a
-                        href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=rank">Rank
-                        Dashboard</a></li>
+                <li>
+                    <a href='<?= url ?>?v=teams'>Teams</a>
+                </li>
+                <li>
+                    <a href='<?= url ?>?v=rank'>Rank Dashboard</a>
+                </li>
             </ul>
         </div>
     </nav>
-    <ul class="sidenav" id="mobile-demo">
-        <li class="active"><a href="sass.html">Home</a></li>
-        <li><a href="ranks.html">Rank Dashboard</a></li>
-    </ul>
 
     <div class="container">
-        <h1 style="text-align: center;">Teams</h1>
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <div class="row center">
+                    <div class="col s12 m10 offset-m1">
+                        <h1 class="header">Team 3476-B</h1>
+                        <h4>Drizzling Espresso Shots</h2>
+                    </div>
+                    <img class="responsive-img" style="margin: 25px;"
+                        src="https://storage.googleapis.com/file-in.appspot.com/files/GrHZklGa42.png" />
+                    <div class="col s12 m8 offset-m2">
+                        <h4 class="light">Beach Blitz Scouting Hackathon</h4>
+                    </div>
+                </div>
+                <div class="row center">
+                    <a href='<?= url ?>?v=rank' id="download-button"
+                        class="btn-large waves-effect waves-light">Rankings</a>
+                    <a href='<?= url ?>?v=teams' id="upgrade-button"
+                        class="btn-large waves-effect waves-light">Teams</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8 offset-m1 xl7 offset-xl1 center-on-small-only">
+            <h1 class="header">About</h1>
+            <h4 class="light">Our Team</h4>
+        </div>
         <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/CAI0vwc9C9.png">
+            <div class="col s4 m4" style="margin-top: 25px;">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/1S1rTFdmlF.jpg">
                     </div>
                     <div class="card-content">
-                        <h4>MVRT</h4>
-                        Team 115
-                    </div>
-                    <div class="card-action">
-                        <a
-                            href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=115">Team
-                            Data</a>
-                        <a href="https://www.thebluealliance.com/team/115">TBA</a>
+                        <h5>Aditya Rawat</h5>
+                        <p>FRC & Code Orange member since 2019. Mainly a web developer and programmer.</p>
                     </div>
                 </div>
             </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/dg7qt9lbQc.png">
+            <div class="col s4 m4" style="margin-top: 25px;">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/0YCq5T92Pe.png">
                     </div>
                     <div class="card-content">
-                        <h4>The Cheesy Poofs</h4>
-                        Team 254
-                    </div>
-                    <div class="card-action">
-                        <a
-                            href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=254">Team
-                            Data</a>
-                        <a href="https://www.thebluealliance.com/team/254">TBA</a>
+                        <h5>Aditya Girish</h5>
+                        <p>FRC & Code Orange member since 2020. Mainly a business oriented person.</p>
                     </div>
                 </div>
             </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/50a1b3f2e4b05a733d16605d/1579824523384-YUVSK4BT5DF66JLVJR7O/Copy+of+Orange+Logo+-+Vertical+-+Eagle+Robotics.png?format=1500w&content-type=image%2Fpng">
+            <div class="col s4 m4" style="margin-top: 25px;">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/BoCSkZWidf.png">
+
                     </div>
                     <div class="card-content">
-                        <h4>Eagle Robotics</h4>
-                        Team 399
+                        <h5>Mihir Kulkarni</h5>
+                        <p>FRC & Code Orange member since 2019. Mainly a manufacturing oriented person.</p>
                     </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=399">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/399">TBA</a>
+                </div>
+            </div>
+            <div class="col s4 m4" style="margin-top: 25px;">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/1EWDj47gS1.png">
+                    </div>
+                    <div class="card-content">
+                        <h5>Aryan Inamdar</h5>
+                        <p>FRC & Code Orange Member since 2020. Mainly is a programming oriented person.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/joaHum2vNL.png">
+
+        <div class="row" style="margin-top: 50px;">
+            <h4 class="light">Features</h4>
+            <div class="col s12 m10 offset-m1">
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="center promo">
+                            <i class="material-icons large">people</i>
+                            <p class="promo-caption">Teams</p>
+                            <p class="light center">The team page displays every team that participated at
+                                Chezy Champs in 2015. We include details about the team, providing data for each team's
+                                statistics and their Blue Alliance page</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h4>Quixilver</h4>
-                        Team 604
+
+                    <div class="col s12 m4">
+                        <div class="center promo">
+                            <i class="material-icons large">leaderboard</i>
+                            <p class="promo-caption">Rankings</p>
+                            <p class="light center">The Rankings Page displays of the overall event. This includes a
+                                picklist derived from the data provided. We also created charts that would help
+                                determine the differences in scores.</p>
+                        </div>
                     </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=604">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/604">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://msetfish.weebly.com/uploads/5/4/3/2/54320877/background-images/736086566.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>M-SET Fish</h4>
-                        Team 649
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=649">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/649">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://homesteadrobotics.com/wp-content/uploads/2019/11/mech-final-e1585719376359.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Homestead Robotics</h4>
-                        Team 670
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=670">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/670">TBA</a>
+
+                    <div class="col s12 m4">
+                        <div class="center promo">
+                            <i class="material-icons large">analytics</i>
+                            <p class="promo-caption">Team Data</p>
+                            <p class="light center">The Team Data page displays a given team's data and stats throughout
+                                the event. This is derived from the given data set, helping users keep track the
+                                determined scores from every match that they competed in.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://pbs.twimg.com/profile_images/3285436674/d6663fd3db82ded53033cbf33d41f500_400x400.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>The Nerd Herd</h4>
-                        Team 687
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=687">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/687">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/gjJcbWvxnl.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Circuit Breakers</h4>
-                        Team 696
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=696">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/696">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://cdn-cms.f-static.net/uploads/368233/400_5c892a8d3a78f.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>M-A Bears</h4>
-                        Team 766
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=766">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/766">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/1t7ryZbRzX.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>The BioMechs</h4>
-                        Team 841
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=841">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/841">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://lynbrookrobotics.com/wp-content/uploads/2020/04/logo846.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>The Funky Monkeys</h4>
-                        Team 846
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=846">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/846">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/5ed5c3b605f7a6058b712b65/1591067596110-R7D7FC054YIUUS8JW81Q/10669082_961225787237479_5675712213284489612_o.png?content-type=image%2Fpng">
-                    </div>
-                    <div class="card-content">
-                        <h4>RAWC Robotics</h4>
-                        Team 968
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=968">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/968">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://frc971.org/sites/default/files/logo_0.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Spartan Robotics</h4>
-                        Team 971
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=971">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/971">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://www.greybots.com/files/theme/973logosm.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Greybots</h4>
-                        Team 973
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=973">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/973">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://static.wixstatic.com/media/a1f3f7_76b7bcff19a64c1782f299b5c6169b5e~mv2.png/v1/fill/w_513,h_210,al_c,q_85,usm_0.66_1.00_0.01/TKOLogo%20without%20Numbers.webp">
-                    </div>
-                    <div class="card-content">
-                        <h4>TKO</h4>
-                        Team 1351
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=1351">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/1351">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/6gfaQznbiS.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Buchanan Bird Brains</h4>
-                        Team 1671
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=1671">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/1671">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://www.citruscircuits.org/uploads/6/9/3/4/6934550/editor/cc-2017-logo.png?1490732315">
-                    </div>
-                    <div class="card-content">
-                        <h4>Citrus Circuits</h4>
-                        Team 1678
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=1678">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/1678">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://avatars2.githubusercontent.com/u/7676166?s=200&v=4">
-                    </div>
-                    <div class="card-content">
-                        <h4>The MilkenKnights</h4>
-                        Team 1836
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=1836">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/1836">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://pbs.twimg.com/profile_images/1227063542915858432/0aRMqxq5_400x400.jpg">
-                    </div>
-                    <div class="card-content">
-                        <h4>Skunk Works Robotics</h4>
-                        Team 1983
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=1983">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/1983">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://pbs.twimg.com/profile_images/1668825765/eagle_in_gear_400x400.jpg">
-                    </div>
-                    <div class="card-content">
-                        <h4>EagleForce</h4>
-                        Team 2073
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=2073">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/2073">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/5be230802714e54ce7569d08/1570748873823-VE1N3J2MWY89WA3Y0XC5/robodog-logo_preview+%282%29.png?content-type=image%2Fpng">
-                    </div>
-                    <div class="card-content">
-                        <h4>RoboDogs</h4>
-                        Team 2085
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=2085">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/2085">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://avatars3.githubusercontent.com/u/12605084?s=200&v=4">
-                    </div>
-                    <div class="card-content">
-                        <h4>Presentation Invasion</h4>
-                        Team 2135
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=2135">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/2135">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://avatars2.githubusercontent.com/u/5342933?s=200&v=4">
-                    </div>
-                    <div class="card-content">
-                        <h4>WarriorBorgs</h4>
-                        Team 3256
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=3256">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/3256">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/q3iMwHGWMJ.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Friarbots</h4>
-                        Team 3309
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=3309">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/3309">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://avatars2.githubusercontent.com/u/15151105?s=200&v=4">
-                    </div>
-                    <div class="card-content">
-                        <h4>Code Orange</h4>
-                        Team 3476
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=3476">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/3476">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://www.wolfpackrobotics.org/wp-content/uploads/2020/08/25000253.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Wolfpack Robotics</h4>
-                        Team 3859
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=3859">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/3859">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://softsmart.co.za/wp-content/uploads/2018/06/image-not-found-1038x576.jpg"
-                            alt="Retired">
-                    </div>
-                    <div class="card-content">
-                        <h4>The Illuminators</h4>
-                        Team 4543
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=4543">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/4543">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://avatars0.githubusercontent.com/u/7218925?s=200&v=4">
-                    </div>
-                    <div class="card-content">
-                        <h4>Gryffingear</h4>
-                        Team 5012
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=5012">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/5012">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://storage.googleapis.com/file-in.appspot.com/files/xfn02z2wsm.png">
-                    </div>
-                    <div class="card-content">
-                        <h4>Iron Panthers</h4>
-                        Team 5026
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=5026">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/5026">TBA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4 m4">
-                <div class="card large">
-                    <div class="card-image" style="max-height: 250px;">
-                        <img src="https://pbs.twimg.com/profile_images/858541507896238080/heMjrIou_400x400.jpg"
-                            height="250px" width="auto">
-                    </div>
-                    <div class="card-content">
-                        <h4>The Bay Orangutans</h4>
-                        Team 5499
-                    </div>
-                    <div class="card-action">
-                        <a href="https://script.google.com/macros/s/AKfycbwelTs4pt6WR9l5YTcHz2mPBVXq92n_LZN2K5RW-PQ/dev?v=5499">Team Data</a>
-                        <a href="https://www.thebluealliance.com/team/5499">TBA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Drizzling Espresso Shots</h5>
+                    <p class="grey-text text-lighten-4">Thank you for using our web application!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="<?= url ?>?v=home">Home</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="<?= url ?>?v=teams">Teams</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="<?= url ?>?v=rank">Ranks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container" style="text-align: center;">
+                © 2020 Copyright 3476B
+            </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
